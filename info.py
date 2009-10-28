@@ -47,20 +47,18 @@ NOTES = '''
 # =============================================================================
 # relations
 # =============================================================================
-REQUIRES = {
-}
+REQUIRES = [
+	{'magento': '*', 'magento_enterprise': '*'}
+]
 
 EXCLUDES = {
 }
 
-DEPENDS_ON_FILES = (
-    'app/code/core/.../1.php',
-    'app/code/core/.../2.php',
-    'app/code/core/.../3.php',
-)
+DEPENDS_ON_FILES = ()
 
 PEAR_KEY = ''
 
 COMPATIBLE_WITH = {
     'magento': ['1.3.2.3'],
+	'magento_enterprise': ['1.3.2.4']
 }
