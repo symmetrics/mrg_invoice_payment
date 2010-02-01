@@ -6,7 +6,7 @@
 # =============================================================================
 NAME = 'symmetrics_module_invoice_payment'
 
-TAGS = ()
+TAGS = ('php', 'magento', 'symmetrics', 'module', 'payment'. 'invoice')
 
 LICENSE = 'AFL 3.0'
 
@@ -19,29 +19,27 @@ INSTALL_PATH = ''
 # responsibilities
 # =============================================================================
 TEAM_LEADER = {
-    '[firstname] [lastname]': '[email]'
+    'Sergej Braznikov': 'ss@symmetrics.de'
 }
 
 MAINTAINER = {
-    '[firstname] [lastname]': '[email]'
+    'Siegfried Schmitz': 'ss@symmetrics.de'
 }
 
 AUTHORS = {
-    '[firstname] [lastname]': '[email]',
+    'Siegfried Schmitz': 'ss@symmetrics.de'
 }
 
 # =============================================================================
 # additional infos
 # =============================================================================
-INFO = '[short description, max 60 chars]'
+INFO = 'Zahlen auf Rechnung'
 
 SUMMARY = '''
-    [long description
-    with multiple lines]
+Fügt eine neue Zahlungsmethode "Rechnung" hinzu.
 '''
 
 NOTES = '''
-    [special notes, restrictions, bugs etc.]
 '''
 
 # =============================================================================
@@ -51,8 +49,7 @@ REQUIRES = [
 	{'magento': '*', 'magento_enterprise': '*'}
 ]
 
-EXCLUDES = {
-}
+EXCLUDES = {}
 
 DEPENDS_ON_FILES = ()
 
