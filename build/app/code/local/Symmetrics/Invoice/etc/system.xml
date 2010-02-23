@@ -46,7 +46,7 @@
                             <show_in_store>0</show_in_store>
                         </title>
                         <specificgroup translate="label">
-                            <label>Payment on Specific Customer Groups</label>
+                            <label>Payment on specific customer groups</label>
                             <frontend_type>multiselect</frontend_type>
                             <sort_order>51</sort_order>
                             <source_model>adminhtml/system_config_source_customer_group</source_model>
