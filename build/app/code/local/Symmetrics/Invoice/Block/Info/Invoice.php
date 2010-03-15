@@ -1,28 +1,80 @@
 <?php
 /**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @category  Symmetrics
+ * @package   Symmetrics_Invoice
+ * @author    symmetrics gmbh <info@symmetrics.de>
+ * @author    Eugen Gitin <eg@symmetrics.de>
+ * @copyright 2009 Symmetrics Gmbh
+ * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @link      http://www.symmetrics.de/
+ */
+ 
+/**
  * Symmetrics_Invoice_Block_Info_Invoice
  *
- * @category Symmetrics
- * @package Symmetrics_Invoice
- * @author symmetrics gmbh <info@symmetrics.de>, Eugen Gitin <eg@symmetrics.de>
- * @copyright symmetrics gmbh
- * @license http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @category  Symmetrics
+ * @package   Symmetrics_Invoice
+ * @author    symmetrics gmbh <info@symmetrics.de>
+ * @author    Eugen Gitin <eg@symmetrics.de>
+ * @copyright 2009 Symmetrics Gmbh
+ * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @link      http://www.symmetrics.de/
  */
 class Symmetrics_Invoice_Block_Info_Invoice extends Mage_Payment_Block_Info
 {
+    /**
+     * Bank name
+     *
+     * @var string
+     */
     protected $_bankName;
+
+    /**
+     * Bank State Branch number
+     *
+     * @var string
+     */
     protected $_bsb;
+
+    /**
+     * Bank account number
+     *
+     * @var string
+     */
     protected $_accountNumber;
+
+    /**
+     * Bank account name
+     *
+     * @var string
+     */
     protected $_accountName;
 
+    /**
+     * Set invoice template
+     *
+     * @return void
+     */
     protected function _construct()
     {
         parent::_construct();
-		$this->setTemplate('symmetrics/invoice/info/invoice.phtml');
+        $this->setTemplate('symmetrics/invoice/info/invoice.phtml');
     }
 
     /**
-     * Enter description here...
+     * Get bank name var value
      *
      * @return string
      */
@@ -35,7 +87,7 @@ class Symmetrics_Invoice_Block_Info_Invoice extends Mage_Payment_Block_Info
     }
 
     /**
-     * Enter description here...
+     * Get bank BSB var value
      *
      * @return string
      */
@@ -48,7 +100,7 @@ class Symmetrics_Invoice_Block_Info_Invoice extends Mage_Payment_Block_Info
     }
 
     /**
-     * Enter description here...
+     * Get bank account number var value
      *
      * @return string
      */
@@ -60,6 +112,11 @@ class Symmetrics_Invoice_Block_Info_Invoice extends Mage_Payment_Block_Info
         return $this->_accountNumber;
     }
 
+    /**
+     * Get bank account name var value
+     *
+     * @return string
+     */
     public function getAccountName()
     {
         if (is_null($this->_accountName)) {
@@ -69,7 +126,7 @@ class Symmetrics_Invoice_Block_Info_Invoice extends Mage_Payment_Block_Info
     }
 
     /**
-     * Enter description here...
+     * Convertor for additional payment data
      *
      * @return Symmetrics_Invoice_Block_Info_Invoice
      */
@@ -77,10 +134,10 @@ class Symmetrics_Invoice_Block_Info_Invoice extends Mage_Payment_Block_Info
     {
         $details = @unserialize($this->getInfo()->getAdditionalData());
         if (is_array($details)) {
-            $this->_bankName = isset($details['bankname']) ? (string) $details['bankname'] : '';
-            $this->_bsb = isset($details['bsb']) ? (string) $details['bsb'] : '';
-            $this->_accountNumber = isset($details['accountnumber']) ? (string) $details['accountnumber'] : '';
-            $this->_accountName = isset($details['accountname']) ? (string) $details['accountname'] : '';
+            $this->_bankName = isset($details['bankname']) ? (string)$details['bankname'] : '';
+            $this->_bsb = isset($details['bsb']) ? (string)$details['bsb'] : '';
+            $this->_accountNumber = isset($details['accountnumber']) ? (string)$details['accountnumber'] : '';
+            $this->_accountName = isset($details['accountname']) ? (string)$details['accountname'] : '';
         } else {
             $this->_bankName = '';
             $this->_bsb = '';
@@ -93,7 +150,6 @@ class Symmetrics_Invoice_Block_Info_Invoice extends Mage_Payment_Block_Info
 
     public function toPdf()
     {
-        // $this->setTemplate('tweakmag/payment/info/directdeposit/pdf/australia.phtml');
-        return $this->toHtml();
+       return $this->toHtml();
     }
 }

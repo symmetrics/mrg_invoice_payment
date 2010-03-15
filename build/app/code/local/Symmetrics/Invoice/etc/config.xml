@@ -1,34 +1,49 @@
 <?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @category  Symmetrics
+ * @package   Symmetrics_Invoice
+ * @author    symmetrics gmbh <info@symmetrics.de>
+ * @author    Eugen Gitin <eg@symmetrics.de>
+ * @copyright 2009 Symmetrics Gmbh
+ * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @link      http://www.symmetrics.de/
+ */
+-->
 <config>
     <modules>
         <Symmetrics_Invoice>
-            <version>0.1.0</version>
-            <depends>
-                <Mage_Payment />
-            </depends>
+            <version>0.1.1</version>
         </Symmetrics_Invoice>
     </modules>
     <global>
     	<models>
     		<invoice>
-	    		<class>Symmetrics_Invoice</class>
+	    		<class>Symmetrics_Invoice_Model</class>
 	    	</invoice>
     	</models>
-        <resources>
-            <invoice_setup>
-                <setup>
-                    <module>Symmetrics_Invoice</module>
-                </setup>
-                <connection>
-                    <use>core_setup</use>
-                </connection>
-            </invoice_setup>
-            <invoice_read>
-                <connection>
-                    <use>local_read</use>
-                </connection>
-            </invoice_read>
-        </resources>
+    	<blocks>
+    	    <invoice>
+	    		<class>Symmetrics_Invoice_Block</class>
+            </invoice>
+        </blocks>
+        <helpers>
+            <invoice>
+                <class>Symmetrics_Invoice_Helper</class>
+            </invoice>
+        </helpers>
     </global>
     <adminhtml>
         <translate>
@@ -56,9 +71,9 @@
         <payment>
         	<invoice>
 				<active>0</active>
-				<model>symmetrics_invoice_model_method_invoice</model>
+				<model>invoice/method_invoice</model>
 				<order_status>pending</order_status>
-				<title>Symmetrics_Invoice</title>
+				<title>Invoice Payment</title>
 				<allowspecific>0</allowspecific>
         	</invoice>
         </payment>

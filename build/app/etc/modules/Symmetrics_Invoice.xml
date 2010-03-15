@@ -4,6 +4,9 @@
         <Symmetrics_Invoice>
             <active>true</active>
             <codePool>local</codePool>
+            <depends>
+                <Mage_Payment />
+            </depends>
         </Symmetrics_Invoice>
     </modules>
 </config>
