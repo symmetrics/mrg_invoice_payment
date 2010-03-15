@@ -46,14 +46,14 @@ class Symmetrics_Invoice_Model_Method_Invoice extends Mage_Payment_Model_Method_
      *
      * @var string
      */
-    protected $_formBlockType = 'symmetrics_invoice_block_form_invoice';
+    protected $_formBlockType = 'invoice/form_invoice';
 
     /**
      * Block type for payment info
      *
      * @var string
      */
-    protected $_infoBlockType = 'symmetrics_invoice_block_info_invoice';
+    protected $_infoBlockType = 'invoice/info_invoice';
 
     /**
      * Get payment method code var value
@@ -64,46 +64,6 @@ class Symmetrics_Invoice_Model_Method_Invoice extends Mage_Payment_Model_Method_
 	{
 		return $this->_code;
 	}
-
-    /**
-     * Get bank name var value
-     *
-     * @var string
-     */
-    public function getBankname()
-    {
-        return $this->getConfigData('bankname');
-    }
-
-    /**
-     * Get bank BSB var value
-     *
-     * @var string
-     */
-    public function getBsb()
-    {
-        return $this->getConfigData('bsb_number');
-    }
-
-    /**
-     * Get bank account number var value
-     *
-     * @var string
-     */
-    public function getAccountnumber()
-    {
-        return $this->getConfigData('account_number');
-    }
- 
-    /**
-     * Get bank account name var value
-     *
-     * @var string
-     */
-    public function getAccountname()
-    {
-        return $this->getConfigData('account_name');
-    }
 
     /**
      * Validate payment method information object
@@ -146,33 +106,5 @@ class Symmetrics_Invoice_Model_Method_Invoice extends Mage_Payment_Model_Method_
     {
     	// run the license check here
         return true;
-    }
-
-    /**
-     * Assign data to info model instance
-     *
-     * @param mixed $data
-     *
-     * @return Symmetrics_Invoice_Model_Method_Invoice
-     */
-    public function assignData($data)
-    {
-        $details = array();
-        if ($this->getBankname()) {
-            $details['bankname'] = $this->getBankname();
-        }
-        if ($this->getBsb()) {
-            $details['bsb'] = $this->getBsb();
-        }
-        if ($this->getAccountnumber()) {
-            $details['accountnumber'] = $this->getAccountnumber();
-        }
-        if ($this->getAccountname()) {
-            $details['accountname'] = $this->getAccountname();
-        }
-        if (!empty($details)) {
-            $this->getInfoInstance()->setAdditionalData(serialize($details));
-        }
-        return $this;
     }
 }

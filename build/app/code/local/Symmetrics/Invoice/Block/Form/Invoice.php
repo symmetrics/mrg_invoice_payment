@@ -35,7 +35,7 @@
 class Symmetrics_Invoice_Block_Form_Invoice extends Mage_Payment_Block_Form
 {
     /**
-     * Set template for invoice
+     * Set template for invoice from
      *
      * @return void
      */

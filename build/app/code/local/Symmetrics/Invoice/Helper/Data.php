@@ -57,44 +57,4 @@ class Symmetrics_Invoice_Helper_Data extends Mage_Core_Helper_Abstract
         }
         return Mage::getModel($class);
     }
-
-    /**
-     * Get bank name
-     *
-     * @return string
-     */
-    public function getBankname()
-    {
-		return $this->getMethodInstance('vorkasse')->getBankname();
-	}
-
-    /**
-     * Get bank account name
-     *
-     * @return string
-     */
-    public function getAccountname()
-    {
-		return $this->getMethodInstance('vorkasse')->getAccountname();
-	}
-
-    /**
-     * Get bank BSB
-     *
-     * @return string
-     */
-    public function getBsb()
-    {
-		return $this->getMethodInstance('vorkasse')->getBsb();
-	}
-
-    /**
-     * Get bank account number
-     *
-     * @return string
-     */
-    public function getAccountnumber()
-    {
-		return $this->getMethodInstance('vorkasse')->getAccountnumber();
-	}
 }
