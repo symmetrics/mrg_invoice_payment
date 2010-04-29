@@ -102,7 +102,7 @@ class Symmetrics_Invoice_Model_Method_Invoice extends Mage_Payment_Model_Method_
     /**
      * Return true if the method can be used at this time
      *
-     * @param $quote quote
+     * @param Mage_Sales_Model_Quote $quote quote
      *
      * @return bool
      */
