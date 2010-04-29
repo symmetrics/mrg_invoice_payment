@@ -25,8 +25,8 @@
 <config>
     <sections>
         <payment>
-        	<groups>
-        		<invoice translate="label">
+            <groups>
+                <invoice translate="label">
                     <label>Symmetrics Invoice Payment</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>0</sort_order>
@@ -79,7 +79,7 @@
                         </specificgroup>
                     </fields>
                 </invoice>
-        	</groups>
-    	</payment>
+            </groups>
+        </payment>
     </sections>
 </config>
