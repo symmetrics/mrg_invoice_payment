@@ -46,7 +46,7 @@ class Symmetrics_Invoice_Helper_Data extends Mage_Core_Helper_Abstract
      *
      * @param string $code payment code
      *
-     * @return object
+     * @return Mage_Payment_Model_Method_Abstract payment method model instance
      */
     public function getMethodInstance($code)
     {
