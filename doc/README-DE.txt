@@ -23,7 +23,7 @@ implementiert Mage_Payment_Model_Method_Abstract. Kein Migrationsdatei
 ist nötig.
 
 ** PROBLEMS
-keine bekannt.
+Zur Zeit sind keine Probleme bekannt.
 
 * TESTCASES
 
