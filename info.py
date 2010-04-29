@@ -23,11 +23,13 @@ TEAM_LEADER = {
 }
 
 MAINTAINER = {
-    'Siegfried Schmitz': 'ss@symmetrics.de',
+    'Yauhen Yakimovich': 'yy@symmetrics.de',
 }
 
 AUTHORS = {
     'Siegfried Schmitz': 'ss@symmetrics.de',
+    'Eugen Gitin': 'eg@symmetrics.de',
+    'Yauhen Yakimovich': 'yy@symmetrics.de',
 }
 
 # =============================================================================

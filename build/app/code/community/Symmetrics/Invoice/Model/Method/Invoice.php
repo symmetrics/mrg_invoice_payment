@@ -16,6 +16,7 @@
  * @package   Symmetrics_Invoice
  * @author    symmetrics gmbh <info@symmetrics.de>
  * @author    Eugen Gitin <eg@symmetrics.de>
+ * @author    Yauhen Yakimovich <yy@symmetrics.de>
  * @copyright 2009-2010 symmetrics gmbh
  * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  * @link      http://www.symmetrics.de/
@@ -28,6 +29,7 @@
  * @package   Symmetrics_Invoice
  * @author    symmetrics gmbh <info@symmetrics.de>
  * @author    Eugen Gitin <eg@symmetrics.de>
+ * @author    Yauhen Yakimovich <yy@symmetrics.de>
  * @copyright 2009-2010 symmetrics gmbh
  * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  * @link      http://www.symmetrics.de/
@@ -105,8 +107,7 @@ class Symmetrics_Invoice_Model_Method_Invoice extends Mage_Payment_Model_Method_
      * @return bool
      */
     public function isAvailable($quote=null)
-    {
-        // run the license check here
+    {        
         return true;
     }
 }
