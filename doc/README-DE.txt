@@ -28,19 +28,19 @@ keine bekannt.
 * TESTCASES
 
 ** BASIC
-*** A:	1. Gehen sie in die Konfiguration unter 
-            "Zahlungsmöglichkeiten" und prüfen sie ob dort auch 
+*** A:	1. Gehen Sie in die Konfiguration unter 
+            "Zahlungsmöglichkeiten" und prüfen Sie ob dort auch 
             "Symmetrics Invoice" erscheint.
-        2. Stellen sie "Aktiviert" auf "Ja", geben sie (falls noch nicht 
+        2. Stellen Sie "Aktiviert" auf "Ja", geben Sie (falls noch nicht 
             vorhanden) einen Titel ein, den Bestellstatus auf den die 
             Bestellung springen soll wenn diese Zahlungsmethode ausgewählt 
-            wurde, und wählen sie die Kundengruppen aus für die diese 
+            wurden, und wählen Sie die Kundengruppen aus für die diese 
             Zahlungsmethode gelten soll (zum testen alle auswählen).
-        3. Gehen sie ins Frontend und kaufen sie einen Artikel. Prüfen 
-            sie ob man diese Zahlungsmöglichkeit beim Bestellvorgang 
+        3. Gehen Sie ins Frontend und kaufen einen Artikel. Prüfen 
+            Sie ob man diese Zahlungsmöglichkeit beim Bestellvorgang 
             auswählen kann.
-        4. Wenn der Kauf abgeschlossen ist, gehen sie ins Backend unter 
-            "Verkäufe => Bestellungen", wählen sie ihre Bestellung aus und 
-            prüfen sie ob der Status der Bestellung dem entspricht, den sie 
+        4. Wenn der Kauf abgeschlossen ist, gehen Sie ins Backend unter 
+            "Verkäufe => Bestellungen", wählen ihre Bestellung aus und 
+            prüfen ob der Status der Bestellung dem entspricht, den Sie 
             in der Konfiguration bei Punkt A: 2. eingestellt haben.
 
