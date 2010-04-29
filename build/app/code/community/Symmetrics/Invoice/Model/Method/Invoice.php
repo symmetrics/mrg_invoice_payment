@@ -15,19 +15,19 @@
  * @category  Symmetrics
  * @package   Symmetrics_Invoice
  * @author    symmetrics gmbh <info@symmetrics.de>
- * @author    Eugen Gitin egb@symmetrics.de>
+ * @author    Eugen Gitin <eg@symmetrics.de>
  * @copyright 2009-2010 symmetrics gmbh
  * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  * @link      http://www.symmetrics.de/
  */
- 
+
 /**
  * Symmetrics_Invoice_Model_Method_Invoice
  *
  * @category  Symmetrics
  * @package   Symmetrics_Invoice
  * @author    symmetrics gmbh <info@symmetrics.de>
- * @author    Eugen Gitin egb@symmetrics.de>
+ * @author    Eugen Gitin <eg@symmetrics.de>
  * @copyright 2009-2010 symmetrics gmbh
  * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  * @link      http://www.symmetrics.de/
@@ -58,12 +58,12 @@ class Symmetrics_Invoice_Model_Method_Invoice extends Mage_Payment_Model_Method_
     /**
      * Get payment method code var value
      *
-     * @var string
+     * @return string code
      */
-	public function getCode()
-	{
-		return $this->_code;
-	}
+    public function getCode()
+    {
+        return $this->_code;
+    }
 
     /**
      * Validate payment method information object
@@ -84,14 +84,14 @@ class Symmetrics_Invoice_Model_Method_Invoice extends Mage_Payment_Model_Method_
      */
     public function canUseForCountry($country)
     {
-    	$groupId = Mage::getSingleton('customer/session')->getCustomer()->getGroupId();
-    	$allowedGroup = $this->getConfigData('specificgroup');
+        $groupId = Mage::getSingleton('customer/session')->getCustomer()->getGroupId();
+        $allowedGroup = $this->getConfigData('specificgroup');
 
         if (!strstr($allowedGroup, ','.$groupId)
             and !strstr($allowedGroup, $groupId.',')
             and !strstr($allowedGroup, ','.$groupId.',')
             and ($allowedGroup!=$groupId) ) {
-			return false;
+            return false;
         }
 
         return true;
@@ -100,11 +100,13 @@ class Symmetrics_Invoice_Model_Method_Invoice extends Mage_Payment_Model_Method_
     /**
      * Return true if the method can be used at this time
      *
+     * @param $quote quote
+     *
      * @return bool
      */
     public function isAvailable($quote=null)
     {
-    	// run the license check here
+        // run the license check here
         return true;
     }
 }

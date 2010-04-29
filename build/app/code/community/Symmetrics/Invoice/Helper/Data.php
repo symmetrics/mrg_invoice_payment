@@ -15,19 +15,19 @@
  * @category  Symmetrics
  * @package   Symmetrics_Invoice
  * @author    symmetrics gmbh <info@symmetrics.de>
- * @author    Eugen Gitin egb@symmetrics.de>
+ * @author    Eugen Gitin <eg@symmetrics.de>
  * @copyright 2009-2010 symmetrics gmbh
  * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  * @link      http://www.symmetrics.de/
  */
- 
+
 /**
  * Symmetrics_Invoice_Helper_Data
  *
  * @category  Symmetrics
  * @package   Symmetrics_Invoice
  * @author    symmetrics gmbh <info@symmetrics.de>
- * @author    Eugen Gitin egb@symmetrics.de>
+ * @author    Eugen Gitin <eg@symmetrics.de>
  * @copyright 2009-2010 symmetrics gmbh
  * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  * @link      http://www.symmetrics.de/
@@ -51,10 +51,11 @@ class Symmetrics_Invoice_Helper_Data extends Mage_Core_Helper_Abstract
     public function getMethodInstance($code)
     {
         $key = self::XML_PATH_PAYMENT_METHODS.'/'.$code.'/model';
-        $class = Mage::getStoreConfig($key);
-        if (!$class) {
+        $classname = Mage::getStoreConfig($key);
+        if (!$classname) {
             Mage::throwException($this->__('Can not load configuration for payment method with code: %s', $code));
         }
-        return Mage::getModel($class);
+
+        return Mage::getModel($classname);
     }
 }
