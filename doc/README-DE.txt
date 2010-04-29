@@ -16,7 +16,11 @@ was Zahlung auf Rechnung ermöglicht.
         System hinzugefügt.
 
 ** TECHNICAL
-Es wird per system.xml eine neue Zahlungsmöglichkeit hinzugefügt.
+Es wird per config.xml und system.xml eine neue Zahlungsmöglichkeit 
+hinzugefügt. Diese Methode nutzt <model>invoice/method_invoice</model>.
+Dabei die verantwortliche Klasse Symmetrics_Invoice_Model_Method_Invoice 
+implementiert Mage_Payment_Model_Method_Abstract. Kein Migrationsdatei 
+ist nötig.
 
 ** PROBLEMS
 keine bekannt.

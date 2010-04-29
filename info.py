@@ -6,7 +6,7 @@
 # =============================================================================
 NAME = 'symmetrics_module_invoice_payment'
 
-TAGS = ('php', 'magento', 'symmetrics', 'module', 'payment', 'invoice')
+TAGS = ('symmetrics', 'magento', 'module', 'php', 'payment', 'invoice', 'mrg')
 
 LICENSE = 'AFL 3.0'
 

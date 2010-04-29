@@ -29,14 +29,14 @@
         </Symmetrics_Invoice>
     </modules>
     <global>
-    	<models>
-    		<invoice>
-	    		<class>Symmetrics_Invoice_Model</class>
-	    	</invoice>
-    	</models>
-    	<blocks>
-    	    <invoice>
-	    		<class>Symmetrics_Invoice_Block</class>
+        <models>
+            <invoice>
+                <class>Symmetrics_Invoice_Model</class>
+            </invoice>
+        </models>
+        <blocks>
+            <invoice>
+                <class>Symmetrics_Invoice_Block</class>
             </invoice>
         </blocks>
         <helpers>
@@ -69,13 +69,13 @@
     </frontend>
     <default>
         <payment>
-        	<invoice>
-				<active>0</active>
-				<model>invoice/method_invoice</model>
-				<order_status>pending</order_status>
-				<title>Invoice Payment</title>
-				<allowspecific>0</allowspecific>
-        	</invoice>
+            <invoice>
+                <active>0</active>
+                <model>invoice/method_invoice</model>
+                <order_status>pending</order_status>
+                <title>Invoice Payment</title>
+                <allowspecific>0</allowspecific>
+            </invoice>
         </payment>
     </default>
 </config>
