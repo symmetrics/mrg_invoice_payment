@@ -19,15 +19,15 @@ INSTALL_PATH = ''
 # responsibilities
 # =============================================================================
 TEAM_LEADER = {
-    'Sergej Braznikov': 'ss@symmetrics.de'
+    'Torsten Walluhn': 'tw@symmetrics.de',
 }
 
 MAINTAINER = {
-    'Siegfried Schmitz': 'ss@symmetrics.de'
+    'Siegfried Schmitz': 'ss@symmetrics.de',
 }
 
 AUTHORS = {
-    'Siegfried Schmitz': 'ss@symmetrics.de'
+    'Siegfried Schmitz': 'ss@symmetrics.de',
 }
 
 # =============================================================================
@@ -36,7 +36,7 @@ AUTHORS = {
 INFO = 'Zahlen auf Rechnung'
 
 SUMMARY = '''
-Fügt eine neue Zahlungsmethode "Rechnung" hinzu.
+    Fügt eine neue Zahlungsmethode "Rechnung" hinzu.
 '''
 
 NOTES = '''
@@ -46,7 +46,7 @@ NOTES = '''
 # relations
 # =============================================================================
 REQUIRES = [
-	{'magento': '*', 'magento_enterprise': '*'}
+    {'magento': '*', 'magento_enterprise': '*'},
 ]
 
 EXCLUDES = {}
@@ -56,6 +56,6 @@ DEPENDS_ON_FILES = ()
 PEAR_KEY = ''
 
 COMPATIBLE_WITH = {
-    'magento': ['1.3.2.3', '1.3.2.4'],
-	'magento_enterprise': ['1.3.2.3', '1.3.2.4']
+     'magento': ['1.4.0.0'],
+     'magento_enterprise': ['1.7.0.0', '1.7.1.0', '1.8.0.0'],
 }
