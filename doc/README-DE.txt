@@ -50,10 +50,10 @@ Zur Zeit sind keine Probleme bekannt.
            und prüfen Sie, ob dort auch "Symmetrics Rechnung" erscheint.
        2. (1) Stellen Sie "Aktiviert" auf "Ja", geben Sie (falls noch nicht 
            vorhanden) einen Titel ein, den Bestellstatus auf den die 
-           Bestellung springen soll wenn diese Zahlungsmethode ausgewählt 
-           wurde und wählen Sie die Kundengruppen aus für die diese 
+           Bestellung springen soll, wenn diese Zahlungsmethode ausgewählt 
+           wurde und wählen Sie die Kundengruppen aus, für die diese 
            Zahlungsmethode gelten soll (zum Testen alle auswählen).
-          (2) Gehen Sie ins Frontend und kaufen einen Artikel. Prüfen 
+          (2) Gehen Sie ins Frontend und kaufen Sie einen Artikel. Prüfen 
            Sie ob man diese Zahlungsmöglichkeit beim Bestellvorgang 
            auswählen kann.
           (3) Wenn der Kauf abgeschlossen ist, gehen Sie ins Backend unter 
@@ -62,7 +62,7 @@ Zur Zeit sind keine Probleme bekannt.
            in der Konfiguration bei Punkt A: 2. eingestellt haben.
 *** B: 1. (1) Erstellen Sie eine neue Kundengruppe "Test" und einen Benutzer
            "test@example.com" für diese Gruppe.
-          (2) Gehen Sie ins Frontend und kaufen einen Artikel als
+          (2) Gehen Sie ins Frontend und kaufen Sie einen Artikel als
            "test@example.com" Kunde ein. Prüfen Sie ob man die "Symmetrics
            Rechnung" Zahlungsmöglichkeit beim Bestellvorgang NICHT auswählen
            kann.
@@ -75,16 +75,16 @@ Zur Zeit sind keine Probleme bekannt.
            erfolgreich ist.
 *** C: 1. (1) Gehen Sie in die Konfiguration unter "System" -> 
            "Konfiguration" -> "Verkäufe" -> "Zahlungsmöglichkeiten"
-           -> "Symmetrics Rechnung" und setzen sie die Mindestwert und
+           -> "Symmetrics Rechnung" und setzen sie den Mindestwert und
            Höchstwert für Gesamtbestellung.
-          (2) Ändern Sie die Werte und überprüfen dabei, dass die 
+          (2) Ändern Sie die Werte und überprüfen Sie dabei, dass die 
            "Symmetrics Rechnung" nur dann in "Zur Kasse" erscheint,
             wenn "Mindestwert" < "Gesamtbestellung" < Höchstwert oder
             "Mindestwert" < "Gesamtbestellung" (Falls Höchstwert nicht 
-            gesetzt ist) oder, anderseits, "Höchstwert" > "Gesamtbestellung".
+            gesetzt ist) oder, andererseits, "Höchstwert" > "Gesamtbestellung".
 *** D: 1. (1) Gehen Sie in die Konfiguration unter "System" -> 
            "Konfiguration" -> "Verkäufe" -> "Zahlungsmöglichkeiten"
            -> "Symmetrics Rechnung" und ändern Sie das Feld 'Neuer Bestellstatus'.
-          (2) Bestellen Sie ein Produkt und überprüfen dass der Bestellstatus
+          (2) Bestellen Sie ein Produkt und überprüfen Sie, dass der Bestellstatus
            stimmt.
-*** E: 1. Für jede Option prüfen Sie ob man sie ändern und speichern kann.
+*** E: 1. Für jede Option müssen Sie prüfen, ob man sie ändern und speichern kann.
