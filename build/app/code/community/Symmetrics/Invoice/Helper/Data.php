@@ -16,32 +16,48 @@
  * @package   Symmetrics_Invoice
  * @author    symmetrics gmbh <info@symmetrics.de>
  * @author    Eugen Gitin <eg@symmetrics.de>
- * @copyright 2009 Symmetrics Gmbh
+ * @author    Yauhen Yakimovich <yy@symmetrics.de>
+ * @copyright 2009-2010 symmetrics gmbh
  * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  * @link      http://www.symmetrics.de/
  */
- 
+
 /**
- * Symmetrics_Invoice_Block_Info_Invoice
+ * Symmetrics_Invoice_Helper_Data
  *
  * @category  Symmetrics
  * @package   Symmetrics_Invoice
  * @author    symmetrics gmbh <info@symmetrics.de>
  * @author    Eugen Gitin <eg@symmetrics.de>
- * @copyright 2009 Symmetrics Gmbh
+ * @author    Yauhen Yakimovich <yy@symmetrics.de>
+ * @copyright 2009-2010 symmetrics gmbh
  * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  * @link      http://www.symmetrics.de/
  */
-class Symmetrics_Invoice_Block_Info_Invoice extends Mage_Payment_Block_Info
+class Symmetrics_Invoice_Helper_Data extends Mage_Core_Helper_Abstract
 {
     /**
-     * Set template for invoice information
+     * XML path for payment method
      *
-     * @return void
+     * @var string
      */
-    protected function _construct()
+    const XML_PATH_PAYMENT_METHODS = 'payment';
+
+    /**
+     * Get payment method instance
+     *
+     * @param string $code payment code
+     *
+     * @return Mage_Payment_Model_Method_Abstract payment method model instance
+     */
+    public function getMethodInstance($code)
     {
-        parent::_construct();
-        $this->setTemplate('symmetrics/invoice/info/invoice.phtml');
+        $key = self::XML_PATH_PAYMENT_METHODS.'/'.$code.'/model';
+        $classname = Mage::getStoreConfig($key);
+        if (!$classname) {
+            Mage::throwException($this->__('Can not load configuration for payment method with code: %s', $code));
+        }
+
+        return Mage::getModel($classname);
     }
 }

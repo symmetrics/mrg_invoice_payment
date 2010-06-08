@@ -16,32 +16,32 @@
  * @package   Symmetrics_Invoice
  * @author    symmetrics gmbh <info@symmetrics.de>
  * @author    Eugen Gitin <eg@symmetrics.de>
- * @copyright 2009 Symmetrics Gmbh
+ * @copyright 2009-2010 symmetrics gmbh
  * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  * @link      http://www.symmetrics.de/
  */
- 
+
 /**
- * Symmetrics_Invoice_Block_Form_Invoice
+ * Symmetrics_Invoice_Block_Info_Invoice
  *
  * @category  Symmetrics
  * @package   Symmetrics_Invoice
  * @author    symmetrics gmbh <info@symmetrics.de>
  * @author    Eugen Gitin <eg@symmetrics.de>
- * @copyright 2009 Symmetrics Gmbh
+ * @copyright 2009-2010 symmetrics gmbh
  * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  * @link      http://www.symmetrics.de/
  */
-class Symmetrics_Invoice_Block_Form_Invoice extends Mage_Payment_Block_Form
+class Symmetrics_Invoice_Block_Info_Invoice extends Mage_Payment_Block_Info
 {
     /**
-     * Set template for invoice from
+     * Set template for invoice information
      *
      * @return void
      */
     protected function _construct()
     {
         parent::_construct();
-        $this->setTemplate('symmetrics/invoice/form/invoice.phtml');
+        $this->setTemplate('symmetrics/invoice/info/invoice.phtml');
     }
 }

@@ -17,7 +17,8 @@
  * @package   Symmetrics_Invoice
  * @author    symmetrics gmbh <info@symmetrics.de>
  * @author    Eugen Gitin <eg@symmetrics.de>
- * @copyright 2009 Symmetrics Gmbh
+ * @author    Yauhen Yakimovich <yy@symmetrics.de>
+ * @copyright 2009-2010 symmetrics gmbh
  * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  * @link      http://www.symmetrics.de/
  */
@@ -25,18 +26,18 @@
 <config>
     <modules>
         <Symmetrics_Invoice>
-            <version>0.1.8</version>
+            <version>0.1.14</version>
         </Symmetrics_Invoice>
     </modules>
     <global>
-    	<models>
-    		<invoice>
-	    		<class>Symmetrics_Invoice_Model</class>
-	    	</invoice>
-    	</models>
-    	<blocks>
-    	    <invoice>
-	    		<class>Symmetrics_Invoice_Block</class>
+        <models>
+            <invoice>
+                <class>Symmetrics_Invoice_Model</class>
+            </invoice>
+        </models>
+        <blocks>
+            <invoice>
+                <class>Symmetrics_Invoice_Block</class>
             </invoice>
         </blocks>
         <helpers>
@@ -69,13 +70,13 @@
     </frontend>
     <default>
         <payment>
-        	<invoice>
-				<active>0</active>
-				<model>invoice/method_invoice</model>
-				<order_status>pending</order_status>
-				<title>Invoice Payment</title>
-				<allowspecific>0</allowspecific>
-        	</invoice>
+            <invoice>
+                <active>0</active>
+                <model>invoice/method_invoice</model>
+                <order_status>pending</order_status>
+                <title>Invoice Payment</title>
+                <allowspecific>0</allowspecific>
+            </invoice>
         </payment>
     </default>
 </config>
