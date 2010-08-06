@@ -86,6 +86,8 @@ class Symmetrics_Invoice_Model_Method_Invoice extends Mage_Payment_Model_Method_
      */
     public function canUseForCountry($country)
     {
+        //unused var, but cannot remove from params
+        $country = null;
         $groupId = Mage::getSingleton('customer/session')->getCustomer()->getGroupId();
         $allowedGroup = $this->getConfigData('specificgroup');
 
@@ -106,8 +108,11 @@ class Symmetrics_Invoice_Model_Method_Invoice extends Mage_Payment_Model_Method_
      *
      * @return bool
      */
-    public function isAvailable($quote=null)
-    {        
+    public function isAvailable($quote = null)
+    {   
+        //unused var, but cannot remove from params
+        $quote = null;
+        
         return true;
     }
 }
