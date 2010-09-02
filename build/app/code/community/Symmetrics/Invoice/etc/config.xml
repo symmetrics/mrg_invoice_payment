@@ -26,7 +26,7 @@
 <config>
     <modules>
         <Symmetrics_Invoice>
-            <version>0.1.13</version>
+            <version>0.1.14</version>
         </Symmetrics_Invoice>
     </modules>
     <global>
