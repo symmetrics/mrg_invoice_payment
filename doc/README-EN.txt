@@ -5,16 +5,16 @@ Extract the content of this archive to your Magento directory.
 Clearing/refresh of the Magento cash might be necessary.
 
 ** USAGE
-This module adds the "Symmetrics inoice" payment option,
-which enables payment to  inoice. The new payment option takes the customer
+This module adds the "Symmetrics invoice" payment option,
+which enables payment to  invoice. The new payment option takes the customer
 groups into consideration. The list of the customer groups can be set in backend.
 Also one can set such parameters as 'Minimum Order Total', 'Maximum Order Total',
 and 'New Order Status'.
 
 ** FUNCTIONALITY
-*** A: The new payment option "Symmetrics inoice" is added in the system.
+*** A: The new payment option "Symmetrics invoice" is added in the system.
 *** B: The new payment option is allowed only for certain user groups.
-       The list of the user groups for "Symmetrics inoice"
+       The list of the user groups for "Symmetrics invoice"
        can be configured in backend.
 *** C: "Maximum Order Total" and "Minimum Order Total" settings
        can be configured in backend.
@@ -22,7 +22,7 @@ and 'New Order Status'.
         order status in backend.
 *** E: Altogether, the following options are configurable 
        in backend under "System" -> "Configuration" -> "Sales" 
-       -> "Payment methods" -> "Symmetrics inoice"
+       -> "Payment methods" -> "Symmetrics invoice"
         1. 'Activated'
         2. 'Title'
         3. 'New order status' (see item D)
@@ -44,8 +44,8 @@ For the time being, no problems are known.
 
 ** BASIC
 *** A: 1. Go to configuration under "System" -> "Configuration" -> "Sales" -> 
-          "Payment methods" -> "Symmetrics inoice" and check if
-           "Symmetrics 	inoice" appears there as well.
+          "Payment methods" -> "Symmetrics invoice" and check if
+           "Symmetrics 	invoice" appears there as well.
        2. (1) Set ìActivatedî on ìyesî, enter a title (if not 
            yet available), the 	order status to which the order 
            should switch after the payment method had been selected, and 
