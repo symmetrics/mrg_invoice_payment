@@ -46,7 +46,7 @@ For the time being, no problems are known.
 *** A: 1. Go to configuration under "System" -> "Configuration" -> "Sales" -> 
           "Payment methods" -> "Symmetrics invoice" and check if
            "Symmetrics 	invoice" appears there as well.
-       2. (1) Set ìActivatedî on ìyesî, enter a title (if not 
+       2. (1) Set "Activated" on "yes", enter a title (if not 
            yet available), the 	order status to which the order 
            should switch after the payment method had been selected, and 
            select the customer groups for whom this payment method  
@@ -54,10 +54,10 @@ For the time being, no problems are known.
           (2) Go to frontend and buy a product. Check if one can select 
            this payment method in the order process. 
           (3) When the purchase is complete, go to backend under 
-           ìSales => Ordersî,  select your order and check if the order 
+           "Sales => Orders",  select your order and check if the order 
           status corresponds to the one you set in the  
           configuration in item A: 2.
-*** B: 1. (1) Create a new customer group ìTestî and user "test@example.com"
+*** B: 1. (1) Create a new customer group "Test" and user "test@example.com"
            for this group.
           (2) Go to frontend and buy a product as "test@example.com" customer.
            Check if one can NOT select the "Symmetrics invoice" payment option in
