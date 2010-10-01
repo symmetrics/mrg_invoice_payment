@@ -1,90 +1,82 @@
 * DOCUMENTATION
 
 ** INSTALLATION
-Extrahieren Sie den Inhalt dieses Archivs in Ihr Magento-Verzeichnis.
-Ggf. ist das Leeren/Auffrischen des Magento-Caches notwendig.
+Extract the content of this archive to your Magento directory. 
+Clearing/refresh of the Magento cash might be necessary.
 
 ** USAGE
-Dieses Modul fügt die Zahlungsmöglichkeit "Symmetrics Rechnung" hinzu,
-welche Zahlung auf Rechnung ermöglicht. Die neue Zahlungsmöglichkeit
-berücksichtigt die Kunden-Gruppen. Die Liste der Kundengruppen kann man
-im Back-End einstellen. Dazu darf man auch die Parameter wie
-'Mindestwert für Gesamtbestellung', 'Höchstwert für Gesamtbestellung',
-und 'Neuer Bestellstatus' einstellen.
+This module adds the "Symmetrics inoice" payment option,
+which enables payment to  inoice. The new payment option takes the customer
+groups into consideration. The list of the customer groups can be set in backend.
+Also one can set such parameters as 'Minimum Order Total', 'Maximum Order Total',
+and 'New Order Status'.
 
 ** FUNCTIONALITY
-*** A: Es wird die neue Zahlungsmöglichkeit "Symmetrics Rechnung" im
-        System hinzugefügt.
-*** B: Die neue Zahlungsmöglichkeit wird nur für bestimmte Benutzergruppen
-        gestattet. Die Liste der Kundengruppen für "Symmetrics Rechnung" können 
-        im Back-End konfiguriert werden.
-*** C: Einstellungen "Maximum Order Total" und "Minimum Order Total" können
-        im Back-End konfiguriert werden.
-*** D: Es gibt eine Möglichkeit, den Bestellstatus für jede neue 
-        Bestellung im Back-End zu konfigurieren.
-*** E: Insgesamt die folgende Optionen sind im Back-End unter 
-       "System" -> "Konfiguration" -> "Verkäufe" -> "Zahlungsmöglichkeiten"
-       -> "Symmetrics Rechnung" konfigurierbar:
-        1. 'Aktiviert'
-        2. 'Titel'
-        3. 'Neuer Bestellstatus' (Sieh Punkt D)
-        4. 'Zahlart für bestimmte Kundengruppen' (Sieh Punkt B)
-        5. 'Mindestwert für Gesamtbestellung' (Sieh Punkt C)
-        6. 'Höchstwert für Gesamtbestellung' (Sieh Punkt C)
+*** A: The new payment option "Symmetrics inoice" is added in the system.
+*** B: The new payment option is allowed only for certain user groups.
+       The list of the user groups for "Symmetrics inoice"
+       can be configured in backend.
+*** C: "Maximum Order Total" and "Minimum Order Total" settings
+       can be configured in backend.
+*** D: For each new order there is a possibility to configure 
+        order status in backend.
+*** E: Altogether, the following options are configurable 
+       in backend under "System" -> "Configuration" -> "Sales" 
+       -> "Payment methods" -> "Symmetrics inoice"
+        1. 'Activated'
+        2. 'Title'
+        3. 'New order status' (see item D)
+        4. 'Payment methods for certain customer groups' (see item B)
+        5. 'Minimum Order Total' (see item C)
+        6. 'Maximum Order Total' (see item C)
 
 ** TECHNICAL
-Es wird per config.xml und system.xml eine neue Zahlungsmöglichkeit 
-hinzugefügt. Diese Methode nutzt <model>invoice/method_invoice</model>.
-Dabei implementiert die verantwortliche Klasse 
-Symmetrics_Invoice_Model_Method_Invoice Mage_Payment_Model_Method_Abstract. 
-Keine Migrationsdatei ist nötig.
+A new payment method is added through config.xml and system.xml.
+This method uses <model>invoice/method_invoice</model>.
+At the same time, the responsible class Symmetrics_Invoice_Model_Method_Invoice 
+implements Mage_Payment_Model_Method_Abstract.
+No migration file is necessary.
 
 ** PROBLEMS
-Zur Zeit sind keine Probleme bekannt.
+For the time being, no problems are known.
 
 * TESTCASES
 
 ** BASIC
-*** A: 1. Gehen Sie in die Konfiguration unter "System" -> 
-           "Konfiguration" -> "Verkäufe" -> "Zahlungsmöglichkeiten"
-           und prüfen Sie, ob dort auch "Symmetrics Rechnung" erscheint.
-       2. (1) Stellen Sie "Aktiviert" auf "Ja", geben Sie (falls noch nicht 
-           vorhanden) einen Titel ein, den Bestellstatus auf den die 
-           Bestellung springen soll, wenn diese Zahlungsmethode ausgewählt 
-           wurde und wählen Sie die Kundengruppen aus, für die diese 
-           Zahlungsmethode gelten soll (zum Testen alle auswählen).
-          (2) Gehen Sie ins Frontend und kaufen Sie einen Artikel. Prüfen 
-           Sie ob man diese Zahlungsmöglichkeit beim Bestellvorgang 
-           auswählen kann.
-          (3) Wenn der Kauf abgeschlossen ist, gehen Sie ins Backend unter 
-           "Verkäufe => Bestellungen", wählen Ihre Bestellung aus und 
-           prüfen, ob der Status der Bestellung dem entspricht, den Sie 
-           in der Konfiguration bei Punkt A: 2. eingestellt haben.
-*** B: 1. (1) Erstellen Sie eine neue Kundengruppe "Test" und einen Benutzer
-           "test@example.com" für diese Gruppe.
-          (2) Gehen Sie ins Frontend und kaufen Sie einen Artikel als
-           "test@example.com" Kunde ein. Prüfen Sie ob man die "Symmetrics
-           Rechnung" Zahlungsmöglichkeit beim Bestellvorgang NICHT auswählen
-           kann.
-       2. (1) Gehen Sie in die Konfiguration unter "System" -> 
-           "Konfiguration" -> "Verkäufe" -> "Zahlungsmöglichkeiten"
-           -> "Symmetrics Rechnung" fügen in die neue Kundengruppe in der 
-           Gruppenliste der "Symmetrics Rechnung" Zahlungsmethode hinzu.
-          (2) Wiederholen Sie Punkt B.1(2), aber dieses Mal überprüfen Sie, 
-           ob der Kauf mit der "Symmetrics Rechnung" Zahlungsmethode
-           erfolgreich ist.
-*** C: 1. (1) Gehen Sie in die Konfiguration unter "System" -> 
-           "Konfiguration" -> "Verkäufe" -> "Zahlungsmöglichkeiten"
-           -> "Symmetrics Rechnung" und setzen sie den Mindestwert und
-           Höchstwert für Gesamtbestellung.
-          (2) Ändern Sie die Werte und überprüfen Sie dabei, dass die 
-           "Symmetrics Rechnung" nur dann in "Zur Kasse" erscheint,
-            wenn "Mindestwert" < "Gesamtbestellung" < Höchstwert oder
-            "Mindestwert" < "Gesamtbestellung" (Falls Höchstwert nicht 
-            gesetzt ist) oder, andererseits, "Höchstwert" > "Gesamtbestellung".
-*** D: 1. (1) Gehen Sie in die Konfiguration unter "System" -> 
-           "Konfiguration" -> "Verkäufe" -> "Zahlungsmöglichkeiten"
-           -> "Symmetrics Rechnung" und ändern Sie das Feld 'Neuer Bestellstatus'.
-          (2) Bestellen Sie ein Produkt und überprüfen Sie, dass der Bestellstatus
-           stimmt.
-*** E: 1. Für jede Option müssen Sie prüfen, ob man sie ändern und speichern kann.
+*** A: 1. Go to configuration under "System" -> "Configuration" -> "Sales" -> 
+          "Payment methods" -> "Symmetrics inoice" and check if
+           "Symmetrics 	inoice" appears there as well.
+       2. (1) Set ìActivatedî on ìyesî, enter a title (if not 
+           yet available), the 	order status to which the order 
+           should switch after the payment method had been selected, and 
+           select the customer groups for whom this payment method  
+           in the order process.
+          (2) Go to frontend and buy a product. Check if one can select 
+           this payment method in the order process. 
+          (3) When the purchase is complete, go to backend under 
+           ìSales => Ordersî,  select your order and check if the order 
+          status corresponds to the one you set in the  
+          configuration in item A: 2.
+*** B: 1. (1) Create a new customer group ìTestî and user "test@example.com"
+           for this group.
+          (2) Go to frontend and buy a product as "test@example.com" customer.
+           Check if one can NOT select the "Symmetrics invoice" payment option in
+           the order process.
+       2. (1) Go to the configuration under "System" ->
+           "Configuration" -> "Sales" 	-> "Payment methods" -> "Symmetrics invoice"
+          add the new customer group in the group list of 
+           "Symmetrics invoice"  payment method.
+          (2) Repeat item B.1(2), but this time check if purchase is  
+           successful 	with "Symmetrics invoice" payment method.
+*** C: 1. (1) Go to configuration under "System" -> 
+          "Configuration" -> "Sales" -> "Payment methods" -> "Symmetrics invoice"
+           and set Minimum and Maximum 	Order Total.
+           (2) Change the values and check that the "Symmetrics invoice" appears 
+           only then in "Checkout" if "Minimum" < "Order Total " < Maximum or
+            "Minimum" < "Order Total" (if maximum is not set) or,
+            on the other hand, 	"Maximum" > "Order Total". 
+*** D: 1. (1) Go the the configuration under "System" -> "Configuration"-> 
+           "Sales" -> "Payment methods" -> "Symmetrics invoice" and
+          change the 'New order status' field.
+          (2) Order a product and check if the order status is correct.
+*** E: 1. For each option you must check if one can change and save them.
