@@ -112,7 +112,12 @@ class Symmetrics_Invoice_Model_Method_Invoice extends Mage_Payment_Model_Method_
     {   
         //unused var, but cannot remove from params
         $quote = null;
+        $storeId = Mage::app()->getStore()->getId();
         
-        return true;
+        if (Mage::getStoreConfig('payment/invoice/active', $storeId)) {
+            return true;
+        }
+        
+        return false;
     }
 }
