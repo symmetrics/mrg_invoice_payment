@@ -89,16 +89,9 @@ class Symmetrics_Invoice_Model_Method_Invoice extends Mage_Payment_Model_Method_
         //unused var, but cannot remove from params
         $country = null;
         $groupId = Mage::getSingleton('customer/session')->getCustomer()->getGroupId();
-        $allowedGroup = $this->getConfigData('specificgroup');
+        $allowedGroups = explode(',', $this->getConfigData('specificgroup'));
 
-        if (!strstr($allowedGroup, ','.$groupId)
-            and !strstr($allowedGroup, $groupId.',')
-            and !strstr($allowedGroup, ','.$groupId.',')
-            and ($allowedGroup!=$groupId) ) {
-            return false;
-        }
-
-        return true;
+        return in_array($groupId, $allowedGroups);
     }
 
     /**
