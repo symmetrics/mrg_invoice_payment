@@ -49,7 +49,7 @@ For the time being, no problems are known.
        2. (1) Set "Activated" on "yes", enter a title (if not 
            yet available), the 	order status to which the order 
            should switch after the payment method had been selected, and 
-           select the customer groups for whom this payment method  
+           select the customer groups for whom this payment method is made
            in the order process.
           (2) Go to frontend and buy a product. Check if one can select 
            this payment method in the order process. 
