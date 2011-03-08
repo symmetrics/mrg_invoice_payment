@@ -93,24 +93,4 @@ class Symmetrics_Invoice_Model_Method_Invoice extends Mage_Payment_Model_Method_
 
         return in_array($groupId, $allowedGroups);
     }
-
-    /**
-     * Return true if the method can be used at this time
-     *
-     * @param Mage_Sales_Model_Quote $quote quote
-     *
-     * @return bool
-     */
-    public function isAvailable($quote = null)
-    {   
-        //unused var, but cannot remove from params
-        $quote = null;
-        $storeId = Mage::app()->getStore()->getId();
-        
-        if (Mage::getStoreConfig('payment/invoice/active', $storeId)) {
-            return true;
-        }
-        
-        return false;
-    }
 }
