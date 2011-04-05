@@ -2,11 +2,11 @@
 
 ** INSTALLATION
 Extract the content of this archive to your Magento directory. 
-Clearing/refresh of the Magento cash might be necessary.
+Clearing/refresh of the Magento cache might be necessary.
 
 ** USAGE
 This module adds the "Symmetrics invoice" payment option,
-which enables payment to  invoice. The new payment option takes the customer
+which enables payment by invoice. The new payment option takes the customer
 groups into consideration. The list of the customer groups can be set in backend.
 Also one can set such parameters as 'Minimum Order Total', 'Maximum Order Total',
 and 'New Order Status'.
