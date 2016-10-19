@@ -1,0 +1,5 @@
+build/app/code/community/Symmetrics/Invoice/                                app/code/community/Symmetrics/Invoice/
+build/app/design/adminhtml/default/default/template/symmetrics/invoice/     app/design/adminhtml/default/default/template/symmetrics/invoice/
+build/app/design/frontend/default/default/template/symmetrics/invoice/      app/design/frontend/default/default/template/symmetrics/invoice/
+build/app/etc/modules/Symmetrics_Invoice.xml                                app/etc/modules/Symmetrics_Invoice.xml
+build/app/locale/de_DE/Symmetrics_Invoice.csv                               app/locale/de_DE/Symmetrics_Invoice.csv
