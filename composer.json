@@ -1,0 +1,30 @@
+{
+    "name": "careware/magento-invoice",
+    "type": "magento-module",
+    "description": "Invoice module for magento.",
+    "authors": [
+        {
+            "name": "Henry Hirsch",
+            "email": "henry.hirsch@careware.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/magento-hackathon/magento-composer-installer"
+        }
+    ],
+    "require": {
+        "magento-hackathon/magento-composer-installer":"*"
+    },
+    "extra": {
+        "magento-root-dir": "./",
+        "map": [
+          ["./app/design/frontend/default/default/template/symmetrics", "./app/design/frontend/default/default/template/symmetrics"],
+          ["./app/design/adminhtml/default/default/template/symmetrics", "./app/design/adminhtml/default/default/template/symmetrics"],
+          ["./app/etc/modules/Symmetrics_Invoice.xml", "./app/etc/modules/Symmetrics_Invoice.xml"],
+          ["./app/locale/de_DE/Symmetrics_Invoice.csv", "./app/locale/de_DE/Symmetrics_Invoice.csv"],
+          ["./app/code/community/Symmetrics/Invoice", "./app/code/community/Symmetrics/Invoice"]            
+       ]
+    }
+}
